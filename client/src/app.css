@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&display=swap");
+
+* {
+  --primary: rgb(87, 109, 143);
+  --darker-primary: rgb(42, 60, 85);
+}
+
+/* General Color */
+.color-primary {
+  color: var(--primary);
+}
+
+/* Buttons */
+button.btn {
+  background: var(--primary);
+  border: none;
+}
+
+button.btn:hover,
+button.btn:focus {
+  background: var(--darker-primary);
+}
+
+button.edit-btn {
+  background: rgb(36, 155, 89);
+}
+
+button.edit-btn:hover,
+button.edit-btn:focus {
+  background: rgb(22, 97, 56);
+}
+
+button.delete-btn {
+  background: rgb(199, 61, 61);
+}
+
+button.delete-btn:hover,
+button.delete-btn:focus {
+  background: rgb(128, 43, 43);
+}
+
+/* Links */
+a,
+a:visited {
+  color: var(--primary);
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: black;
+}
+
+/* Responsive Sizing for Account Update, Post, View Blogs pages */
+.account-form,
+.all-blogs-card,
+.post-card {
+  width: 90vw;
+}
+
+@media only screen and (min-width: 576px) {
+  .account-form,
+  .all-blogs-card {
+    width: 500px;
+  }
+
+  .post-card {
+    width: 70vw;
+  }
+}
+
+/* Navigation */
+.navigation {
+  background: var(--darker-primary);
+  color: white;
+}
+
+.navigation a,
+a:visited,
+a:hover {
+  font-weight: 400;
+}
+
+button.logout {
+  background: white;
+  color: var(--primary);
+}
+
+button.logout:hover,
+button.logout:focus,
+button.logout:active {
+  background: white;
+  color: var(--primary-darker);
+}
+
+/* Home Page */
+.home-title {
+  font-family: "Averia Serif Libre", sans-serif;
+  font-weight: 700;
+  font-size: 7rem;
+  color: var(--primary);
+  word-wrap: break-word;
+}
+
+.home-text {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-jumbotron {
+  width: 94vw;
+}
+
+@media only screen and (min-width: 805px) {
+  .home-title {
+    font-size: 10rem;
+  }
+  .home-jumbotron {
+    width: auto;
+  }
+}
