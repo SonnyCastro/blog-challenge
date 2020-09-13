@@ -29,9 +29,9 @@ const Register = ({ history }) => {
       {currentUser && <Redirect to={`/account`} />}
       <Row>
         <Col>
-          <Card>
+          <Card className="account-form">
             <Card.Header className="text-center">
-              <Card.Title>Register</Card.Title>
+              <Card.Title style={{ fontSize: "1.5rem" }}>Register</Card.Title>
               <Card.Subtitle>Sign up for an account here.</Card.Subtitle>
             </Card.Header>
             <Card.Body>
@@ -95,7 +95,7 @@ const Register = ({ history }) => {
                 <Button type="submit">Submit</Button>
               </Form>
             </Card.Body>
-            <Card.Footer>
+            <Card.Footer className="text-center">
               <Link to="/login">
                 Already have an account? Click here to log in!
               </Link>

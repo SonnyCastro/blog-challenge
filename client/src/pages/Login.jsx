@@ -23,6 +23,9 @@ const Login = ({ history }) => {
         }
       })
       .catch((error) => {
+        alert(
+          "Something went wrong! Please check to make sure you are using a valid email and password."
+        );
         console.log(error);
       });
   };
@@ -32,9 +35,9 @@ const Login = ({ history }) => {
       {currentUser && <Redirect to={`/account`} />}
       <Row>
         <Col>
-          <Card>
+          <Card className="account-form">
             <Card.Header className="text-center">
-              <Card.Title>Login</Card.Title>
+              <Card.Title style={{ fontSize: "1.5rem" }}>Login</Card.Title>
               <Card.Subtitle>Access your account here.</Card.Subtitle>
             </Card.Header>
             <Card.Body>

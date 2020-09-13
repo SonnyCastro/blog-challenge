@@ -3,8 +3,10 @@ import "../app.css";
 import { AppContext } from "../context/AppContext";
 import { Button, Form } from "react-bootstrap";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 const UpdateInfoForm = () => {
+  const history = useHistory();
   const [formData, setFormData] = useState(null);
   const { currentUser, setCurrentUser } = useContext(AppContext);
 
@@ -36,6 +38,17 @@ const UpdateInfoForm = () => {
       .catch((error) => {
         console.log(error);
       });
+  };
+
+  const handleDelete = () => {
+    axios
+      .delete("/api/author/me", { withCredentials: true })
+      .then((response) => {
+        setCurrentUser(null);
+        sessionStorage.removeItem("user");
+        history.push("/login");
+      })
+      .catch((error) => console.log(error));
   };
 
   return (
@@ -136,7 +149,7 @@ const UpdateInfoForm = () => {
         </Form.Group>
 
         <Button type="submit">Submit</Button>
-        <Button className="ml-3 delete-btn" type="submit">
+        <Button className="ml-3 delete-btn" onClick={handleDelete}>
           Delete Account
         </Button>
       </Form>

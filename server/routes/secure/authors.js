@@ -27,6 +27,18 @@ router.patch("/api/author/me", async (req, res) => {
   }
 });
 
+// Delete current author
+router.delete("/api/author/me", async (req, res) => {
+  try {
+    req.user.tokens = [];
+    await req.user.remove();
+    res.clearCookie("jwt");
+    res.json({ message: "Account deleted." });
+  } catch (err) {
+    res.status(500).json({ err: err.toString() });
+  }
+});
+
 // Logout current author
 router.post("/api/author/logout", async (req, res) => {
   try {

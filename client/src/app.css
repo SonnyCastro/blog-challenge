@@ -48,9 +48,11 @@ a:visited {
 }
 
 a:hover,
+a:active,
 a:focus {
   text-decoration: none;
   color: black;
+  font-weight: bold;
 }
 
 /* Responsive Sizing for Account Update, Post, View Blogs pages */
@@ -78,8 +80,8 @@ a:focus {
 }
 
 .navigation a,
-a:visited,
-a:hover {
+.navigation a:visited,
+.navigation a:hover {
   font-weight: 400;
 }
 
@@ -96,10 +98,11 @@ button.logout:active {
 }
 
 /* Home Page */
+
 .home-title {
   font-family: "Averia Serif Libre", sans-serif;
   font-weight: 700;
-  font-size: 7rem;
+  font-size: 5rem;
   color: var(--primary);
   word-wrap: break-word;
 }
@@ -108,6 +111,7 @@ button.logout:active {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0px;
 }
 
 .home-jumbotron {
@@ -117,6 +121,9 @@ button.logout:active {
 @media only screen and (min-width: 805px) {
   .home-title {
     font-size: 10rem;
+  }
+  .home-text {
+    padding: 10px 50px;
   }
   .home-jumbotron {
     width: auto;

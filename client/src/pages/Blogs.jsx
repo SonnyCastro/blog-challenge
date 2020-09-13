@@ -19,8 +19,12 @@ const Blogs = () => {
   return (
     <>
       <Row>
-        <Col>
-          <h1 className="mb-5">All Blogs:</h1>
+        <Col className="text-center">
+          <h1>All Blogs</h1>
+          <h5 className="post-card mb-5">
+            Here is a collection of all our authors' blogs! Look through these
+            blog descriptions to find some great reading material.
+          </h5>
         </Col>
       </Row>
       <Row>
