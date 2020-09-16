@@ -1,34 +1,25 @@
 # Blog Challenge
 
-### MERN app created to fill the following criteria:
+A MERN stack blog with the following features:
 
-```
-[x] As a writer, I'd like to be able to login into the system so I can have access to my blog posts.
-
-[x] As a writer, I'd like to be able to logout of the system so other people won't have access to my blog posts using a public terminal.
-
-[x] As a writer, I'd like to be able to publish blog entries.
-
-[x] As a writer, I'd like to be able to edit my existing blog entries.
-
-[x] As a writer, I'd like to be able to delete one of my existing blog entries.
-
-[x] As a writer, I'd like to be able to log in and out of my blog so that I can edit and delete my own blog entries.
-
-[x] As a reader, I'd like to be able to view all the entries of a blog, regardless of whether I am logged in, so that I may easily access a writer's content.
-
-[x] As a reader, I'd like to be able to comment on all the entires of a blog, regardless of whether I am logged in, so that I can spam entries that I don't like with comments, and pick fights with other users.
-
-[x] As a reader, I'd like for the app to have simple, visually appealing styling so that I have an enjoyable experience reading.
-```
+- Authentication system for authors to create an account and login/logout
+- Authors can create, update and delete blog posts, update their account and blog information, and delete their account.
+- Anyone can submit comments on any post; it is not required to be logged-in to do so. If a commenter does not fill out the name field, they will appear as 'anonymous'.
+- There is a list of all blogs to choose which one to start reading
+- Each blog has a title, description, the author name and a preview of all their posts
+- Blog was styled using the Bootstrap library modified with custom CSS
 
 <hr/>
 
-### Installation Instructions
+### Installation & Run Instructions
 
 - `git clone` the repo
 - `yarn install` in both root and client directories
 - `yarn dev` to run both servers
+
+There is a seed file available if you would like to populate your blog with pre-made data! Just run `nodemon server/db/seeds/index.js` from the root directory.
+
+You will also need a .env file with a MongoDB URL to connect to your database, and a JWT secret for the JSON Web Token authentication.
 
 <hr/>
 
